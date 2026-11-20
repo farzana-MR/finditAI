@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Found Item - FindIt AI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/forms.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-brand">
+          <img src="../assets/logo/logo.png" alt="FindIt AI Logo" class="sidebar-brand-img">
+        </a>
+      </div>
+
+      <div class="sidebar-nav-container">
+        <div>
+          <div class="sidebar-section-title">Main Menu</div>
+          <div class="sidebar-menu">
+            <a href="dashboard.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </span>
+              <span>Dashboard</span>
+            </a>
+            <a href="search-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </span>
+              <span>Search Database</span>
+            </a>
+            <a href="matches.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+              </span>
+              <span>AI Matches</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="sidebar-section-title">Report Items</div>
+          <div class="sidebar-menu">
+            <a href="report-lost.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              </span>
+              <span>Report Lost Item</span>
+            </a>
+            <a href="report-found.html" class="sidebar-link active">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line></svg>
+              </span>
+              <span>Report Found Item</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="sidebar-section-title">My Activity</div>
+          <div class="sidebar-menu">
+            <a href="my-lost-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              </span>
+              <span>My Lost Reports</span>
+            </a>
+            <a href="my-found-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline></svg>
+              </span>
+              <span>My Found Reports</span>
+            </a>
+            <a href="my-claims.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              </span>
+              <span>My Claims</span>
+            </a>
+            <a href="notifications.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              </span>
+              <span>Notifications</span>
+            </a>
+            <a href="rewards.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              </span>
+              <span>Rewards & Badges</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="user-snippet">
+          <div class="user-avatar">AM</div>
+          <div class="user-info-text">
+            <div class="user-info-name">Alex Morgan</div>
+            <div class="user-info-role">Community Member</div>
+          </div>
+        </div>
+        <button onclick="logout()" class="logout-icon-btn" title="Logout">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="sidebar-toggle-btn" class="sidebar-toggle-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <button onclick="if(window.history.length > 1){window.history.back();}else{window.location.href='dashboard.html';}" class="topbar-back-btn" title="Go back to previous page" aria-label="Go Back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Back</span>
+          </button>
+          <div class="page-breadcrumb">
+            <a href="dashboard.html">Dashboard</a>
+            <span>/</span>
+            <span class="current">Report Found Item Studio</span>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <div style="display:flex; align-items:center; gap:0.5rem; background:rgba(15,118,110,0.12); color:var(--secondary); padding:0.35rem 0.85rem; border-radius:999px; font-size:0.775rem; font-weight:700; border:1px solid rgba(15,118,110,0.25);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>Earn +25 Community Hero Points</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="content-body">
+        
+        <!-- Page Title & Hero Header -->
+        <div class="page-title-bar" style="margin-bottom: 2rem;">
+          <div>
+            <div style="display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; font-weight:800; color:var(--secondary); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.4rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line></svg>
+              <span>Found Item Registration Studio</span>
+            </div>
+            <h1 style="font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text-main);">Report a Found Belonging</h1>
+            <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 680px; margin-top: 0.25rem;">
+              Thank you for being a genuine finder! Your report will be instantly matched against lost reports, and you'll receive Finder Reward Points when reunited.
+            </p>
+          </div>
+        </div>
+
+        <!-- Studio Two-Column Grid -->
+        <div class="form-studio-container">
+          <form id="report-found-form">
+            <div class="form-studio-grid">
+              
+              <!-- Left Column: Creation Form Sections -->
+              <div class="studio-sections-list">
+                
+                <!-- Section 1: Item Category & Title -->
+                <div class="studio-card">
+                  <div class="studio-card-header">
+                    <div class="studio-step-badge" style="background:var(--secondary-light); color:var(--secondary); border-color:rgba(15,118,110,0.25);">01</div>
+                    <div class="studio-card-header-text">
+                      <h3>Found Item Classification</h3>
+                      <p>Select what kind of item you discovered.</p>
+                    </div>
+                  </div>
+
+                  <!-- Visual Category Cards Grid -->
+                  <div class="form-group">
+                    <label class="form-label">
+                      <span>Item Category <span class="required">*</span></span>
+                      <span class="form-label-hint">Click to select</span>
+                    </label>
+
+                    <div class="category-picker-grid" id="found-category-picker-grid">
+                      <div class="category-tile active" data-category="Electronics">
+                        <div class="category-tile-check">✓</div>
+                        <div class="category-tile-icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <span class="category-tile-name">Electronics</span>
+                      </div>
+
+                      <div class="category-tile" data-category="Wallets & Bags">
+                        <div class="category-tile-check">✓</div>
+                        <div class="category-tile-icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                        </div>
+                        <span class="category-tile-name">Wallets & Bags</span>
+                      </div>
+
+                      <div class="category-tile" data-category="Documents/IDs">
+                        <div class="category-tile-check">✓</div>
+                        <div class="category-tile-icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><line x1="15" y1="8" x2="17" y2="8"></line><line x1="15" y1="12" x2="17" y2="12"></line><line x1="7" y1="16" x2="17" y2="16"></line></svg>
+                        </div>
+                        <span class="category-tile-name">Documents & IDs</span>
+                      </div>
+
+                      <div class="category-tile" data-category="Keys">
+                        <div class="category-tile-check">✓</div>
+                        <div class="category-tile-icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-1-1l-3 3m2 2l-3 3m-2-2l-3 3m-2-2l-2 2a5 5 0 1 1-7.07-7.07 5 5 0 0 1 7.07 0l11 11"></path></svg>
+                        </div>
+                        <span class="category-tile-name">Keys & Fobs</span>
+                      </div>
+
+                      <div class="category-tile" data-category="Accessories">
+                        <div class="category-tile-check">✓</div>
+                        <div class="category-tile-icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="7"></circle><polyline points="12 9 12 12 13.5 13.5"></polyline><path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.34a2 2 0 0 1 2 1.82l.35 3.83"></path></svg>
+                        </div>
+                        <span class="category-tile-name">Accessories</span>
+                      </div>
+
+                      <div class="category-tile" data-category="Others">
+                        <div class="category-tile-check">✓</div>
+                        <div class="category-tile-icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                        </div>
+                        <span class="category-tile-name">Other Items</span>
+                      </div>
+                    </div>
+
+                    <!-- Hidden sync select -->
+                    <select id="found-category" class="form-select" style="display:none;" required>
+                      <option value="Electronics" selected>Electronics & Gadgets</option>
+                      <option value="Wallets & Bags">Wallets, Bags & Purses</option>
+                      <option value="Documents/IDs">Documents, Passports & IDs</option>
+                      <option value="Keys">Keys & Keychains</option>
+                      <option value="Accessories">Accessories & Jewelry</option>
+                      <option value="Clothing">Clothing & Apparel</option>
+                      <option value="Others">Others / Miscellaneous</option>
+                    </select>
+                  </div>
+
+                  <!-- Found Item Name -->
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label class="form-label" for="found-name">
+                      <span>Found Item Title / Description <span class="required">*</span></span>
+                      <span class="form-label-hint">General name</span>
+                    </label>
+                    <input type="text" id="found-name" class="form-input" placeholder="e.g. Wireless Earbuds in White Charging Case" required>
+                  </div>
+                </div>
+
+                <!-- Section 2: Photograph & Color -->
+                <div class="studio-card">
+                  <div class="studio-card-header">
+                    <div class="studio-step-badge" style="background:var(--secondary-light); color:var(--secondary); border-color:rgba(15,118,110,0.25);">02</div>
+                    <div class="studio-card-header-text">
+                      <h3>Found Item Photograph & Color</h3>
+                      <p>Avoid capturing sensitive card numbers or personal identity codes.</p>
+                    </div>
+                  </div>
+
+                  <!-- Dropzone -->
+                  <div class="form-group">
+                    <label class="form-label">
+                      <span>Upload Photograph <span class="required">*</span></span>
+                      <span class="form-label-hint">Clear photo of the item</span>
+                    </label>
+
+                    <div id="image-dropzone" class="dropzone-container">
+                      <div class="dropzone-pulse-glow"></div>
+                      <input type="file" id="item-image-input" class="file-hidden-input" accept="image/png, image/jpeg, image/webp">
+                      
+                      <div class="dropzone-icon-box" style="color:var(--secondary);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                      </div>
+                      
+                      <div class="dropzone-title">Click to upload or drag & drop photo</div>
+                      <div class="dropzone-hint">
+                        Supports JPG, PNG, WEBP (Max 5MB) • Our automated blur filter conceals private serial numbers from public viewers.
+                      </div>
+                    </div>
+
+                    <!-- Dropzone Active Preview Card -->
+                    <div id="dropzone-preview-card" class="dropzone-preview-card">
+                      <div class="dropzone-preview-thumb-wrap">
+                        <img id="image-preview-img" src="" alt="Uploaded Photo">
+                      </div>
+                      <div class="dropzone-preview-info">
+                        <div class="dropzone-preview-title" id="dropzone-file-name">found-photo.jpg</div>
+                        <div class="dropzone-preview-meta">
+                          <span id="dropzone-file-size">1.1 MB</span>
+                          <span class="ai-status-pill-mini">Ready for Vector Matching</span>
+                        </div>
+                      </div>
+                      <button type="button" id="remove-image-btn" class="dropzone-remove-btn" title="Remove Photo">
+                        ✕ Remove
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Color Swatches -->
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label class="form-label" for="found-color">
+                      <span>Primary Colour <span class="required">*</span></span>
+                      <span class="form-label-hint">Select or type</span>
+                    </label>
+                    <input type="text" id="found-color" class="form-input" value="White" placeholder="e.g. White, Black, Brown, Silver" required>
+                  </div>
+                </div>
+
+                <!-- Section 3: Custody & Location -->
+                <div class="studio-card">
+                  <div class="studio-card-header">
+                    <div class="studio-step-badge" style="background:var(--secondary-light); color:var(--secondary); border-color:rgba(15,118,110,0.25);">03</div>
+                    <div class="studio-card-header-text">
+                      <h3>Physical Custody & Location</h3>
+                      <p>Specify where you found it and who currently holds the physical item.</p>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="found-location">
+                      <span>Found Location <span class="required">*</span></span>
+                      <span class="form-label-hint">Exact campus or city area</span>
+                    </label>
+                    <input type="text" id="found-location" class="form-input" placeholder="e.g. Central University Library, 2nd Fl Study Cubicles" required>
+                  </div>
+
+                  <div class="form-grid-2">
+                    <div class="form-group">
+                      <label class="form-label" for="found-date">
+                        <span>Date Found <span class="required">*</span></span>
+                      </label>
+                      <input type="date" id="found-date" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="found-time">
+                        <span>Approximate Time</span>
+                      </label>
+                      <input type="time" id="found-time" class="form-input" value="11:15">
+                    </div>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label class="form-label" for="found-custody">
+                      <span>Current Physical Custody / Storage Location <span class="required">*</span></span>
+                    </label>
+                    <select id="found-custody" class="form-select" required>
+                      <option value="In my personal possession" selected>In my personal possession (Ready for owner contact)</option>
+                      <option value="Handed to Security Desk">Handed to Security Desk / Front Reception</option>
+                      <option value="Deposited at Campus Lost & Found Office">Deposited at Campus Lost & Found Office</option>
+                      <option value="With Transit Station Master">With Transit / Metro Station Master</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Section 4: Public Description & Verification Question -->
+                <div class="studio-card">
+                  <div class="studio-card-header">
+                    <div class="studio-step-badge" style="background:var(--secondary-light); color:var(--secondary); border-color:rgba(15,118,110,0.25);">04</div>
+                    <div class="studio-card-header-text">
+                      <h3>Public Description & Anti-Fraud Security Question</h3>
+                      <p>Set a verification challenge that only the authentic owner can answer.</p>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="found-description">
+                      <span>Public Item Description <span class="required">*</span></span>
+                      <span class="form-label-hint">Visible to claimants</span>
+                    </label>
+                    <textarea id="found-description" class="form-textarea" placeholder="Provide general details. DO NOT list private secrets (e.g. don't write what PIN or exact card balance is inside) so the real owner can verify." required></textarea>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label class="form-label" for="found-details">
+                      <span>Private Verification Question for Claimants <span style="font-weight:400; color:var(--text-muted);">(Hidden from public)</span></span>
+                      <span class="form-label-hint">Secret Proof</span>
+                    </label>
+                    <input type="text" id="found-details" class="form-input" placeholder="e.g. What is the engraving on the back? What brand was the keychain?">
+                    
+                    <div class="privacy-vault-box">
+                      <div class="privacy-vault-icon" style="color:var(--secondary);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                      </div>
+                      <div class="privacy-vault-content">
+                        <h4 style="color:#0f766e;">Automated Anti-Fraud Shield</h4>
+                        <p style="color:#115e59;">
+                          Claimants must correctly answer your verification prompt before any contact or handover is authorized.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Action Bar -->
+                <div class="form-actions-studio">
+                  <div class="form-actions-left">
+                    <span style="display:inline-flex; align-items:center; gap:0.4rem; color:var(--secondary); font-weight:700;">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      <span>+25 Points credited immediately upon report submission</span>
+                    </span>
+                  </div>
+                  <div class="form-actions-right">
+                    <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-teal btn-lg" style="box-shadow: 0 8px 20px -3px rgba(15,118,110,0.4);">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line></svg>
+                      <span>Submit Report & Run Match (+25 pts)</span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Right Column: Live Found Item Mockup Preview -->
+              <aside class="form-studio-aside">
+                <div class="preview-studio-card">
+                  <div class="preview-header-bar">
+                    <div class="preview-header-title">
+                      <span class="live-indicator-dot" style="background:#06b6d4; box-shadow:0 0 8px #06b6d4;"></span>
+                      <span>Public Item Card Preview</span>
+                    </div>
+                    <span style="font-size:0.75rem; color:#64748b; font-family:var(--font-mono);">FINDER STUDIO</span>
+                  </div>
+
+                  <div class="live-mockup-item">
+                    <div class="live-mockup-media">
+                      <img id="live-preview-img" class="live-mockup-img" src="" alt="Found Item Preview" style="display:none;">
+                      
+                      <div id="live-preview-placeholder" class="live-mockup-placeholder">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></polyline><line x1="12" y1="22" x2="12" y2="7"></line></svg>
+                        <span>Awaiting Photo Upload</span>
+                      </div>
+
+                      <div class="live-mockup-status-badge found-badge">
+                        <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:#ffffff;"></span>
+                        <span>FOUND ITEM</span>
+                      </div>
+                    </div>
+
+                    <div class="live-mockup-body">
+                      <div class="live-mockup-category-tag" style="color:var(--secondary);">
+                        <span>ELECTRONICS</span>
+                      </div>
+                      
+                      <h4 class="live-mockup-title">Wireless Earbuds in Charging Case</h4>
+                      
+                      <p class="live-mockup-desc">
+                        Found resting on the table in study area. Ready to return to the rightful owner once verified.
+                      </p>
+
+                      <div class="live-mockup-meta-list">
+                        <div class="live-mockup-meta-item">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                          <span>Central University Library</span>
+                        </div>
+                        <div class="live-mockup-meta-item">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                          <span>Status: In Finder Custody</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Reward Points Spotlight -->
+                  <div class="ai-diagnostic-box" style="background:rgba(15,118,110,0.15); border-color:rgba(15,118,110,0.35);">
+                    <div style="display:flex; align-items:center; gap:0.75rem;">
+                      <div style="width:42px; height:42px; border-radius:12px; background:var(--secondary); color:#ffffff; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      </div>
+                      <div>
+                        <div style="font-size:0.875rem; font-weight:800; color:#ffffff;">+25 Finder Points</div>
+                        <div style="font-size:0.75rem; color:#94a3b8;">Level up your Community Trust Badge with every return!</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </aside>
+
+            </div>
+          </form>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/forms.js"></script>
+  <script src="../js/notifications.js"></script>
+
+  <script>
+    // Category Picker sync for report-found
+    const foundCatTiles = document.querySelectorAll('#found-category-picker-grid .category-tile');
+    const foundCatSelect = document.getElementById('found-category');
+    foundCatTiles.forEach(tile => {
+      tile.addEventListener('click', () => {
+        foundCatTiles.forEach(t => t.classList.remove('active'));
+        tile.classList.add('active');
+        if (foundCatSelect) {
+          foundCatSelect.value = tile.getAttribute('data-category');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

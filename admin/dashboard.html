@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - FindIt AI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Admin Sidebar -->
+    <aside class="sidebar" style="background:#070d18; border-right-color:#142238;">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-brand">
+          <img src="../assets/logo/logo.png" alt="FindIt AI Logo" class="sidebar-brand-img">
+          <span class="sidebar-brand-text">FindIt <span>ADMIN</span></span>
+        </a>
+      </div>
+
+      <div class="sidebar-nav-container">
+        <div>
+          <div class="sidebar-section-title">Operations</div>
+          <div class="sidebar-menu">
+            <a href="dashboard.html" class="sidebar-link active">
+              <span class="sidebar-link-icon">📊</span>
+              <span>Overview</span>
+            </a>
+            <a href="users.html" class="sidebar-link">
+              <span class="sidebar-link-icon">👥</span>
+              <span>Manage Users</span>
+            </a>
+            <a href="lost-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">❓</span>
+              <span>Lost Item Reports</span>
+            </a>
+            <a href="found-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">🎁</span>
+              <span>Found Items & Custody</span>
+            </a>
+            <a href="claims.html" class="sidebar-link">
+              <span class="sidebar-link-icon">📋</span>
+              <span>Manage Claims</span>
+              <span class="sidebar-badge" style="background:rgba(239,68,68,0.2); color:#ef4444;">1 REVIEW</span>
+            </a>
+            <a href="matches.html" class="sidebar-link">
+              <span class="sidebar-link-icon">🤖</span>
+              <span>AI Match Monitoring</span>
+            </a>
+            <a href="reports.html" class="sidebar-link">
+              <span class="sidebar-link-icon">📈</span>
+              <span>Reports & Analytics</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="sidebar-section-title">Navigation</div>
+          <div class="sidebar-menu">
+            <a href="../user/dashboard.html" class="sidebar-link">
+              <span class="sidebar-link-icon">👤</span>
+              <span>Switch to User View</span>
+            </a>
+            <a href="../index.html" class="sidebar-link">
+              <span class="sidebar-link-icon">🏠</span>
+              <span>Public Landing Page</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-footer" style="background:#050912;">
+        <div class="user-snippet">
+          <div class="user-avatar" style="background:linear-gradient(135deg, #0f766e, #059669);">SJ</div>
+          <div class="user-info-text">
+            <div class="user-info-name">Sarah Jenkins</div>
+            <div class="user-info-role">Super Administrator</div>
+          </div>
+        </div>
+        <button onclick="logout()" class="logout-icon-btn" title="Logout">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        </button>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="sidebar-toggle-btn" class="sidebar-toggle-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <button onclick="if(window.history.length > 1){window.history.back();}else{window.location.href='dashboard.html';}" class="topbar-back-btn" title="Go back to previous page" aria-label="Go Back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Back</span>
+          </button>
+          <div class="page-breadcrumb">
+            <span>Admin Control Center</span>
+            <span>/</span>
+            <span class="current">Dashboard Overview</span>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <div class="badge badge-primary" style="font-family:var(--font-mono); font-size:0.75rem;">
+            🟢 AI PIPELINE: OPERATIONAL
+          </div>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div class="page-title-bar">
+          <div>
+            <h1>Platform Administration & Activity</h1>
+            <p>Module 12: Monitor lost & found reports, review claims, and observe AI matching performance.</p>
+          </div>
+          <div style="display:flex; gap:0.5rem;">
+            <a href="claims.html" class="btn btn-primary btn-sm">Review Pending Claims</a>
+            <a href="reports.html" class="btn btn-secondary btn-sm">Export Summary Report</a>
+          </div>
+        </div>
+
+        <!-- Admin Platform Statistics Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-info">
+              <h3 id="admin-stat-users">6</h3>
+              <p>Registered Users</p>
+            </div>
+            <div class="stat-card-icon-box stat-icon-blue">👥</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-info">
+              <h3 id="admin-stat-lost">5</h3>
+              <p>Total Lost Reports</p>
+            </div>
+            <div class="stat-card-icon-box stat-icon-amber">❓</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-info">
+              <h3 id="admin-stat-found">4</h3>
+              <p>Total Found Reports</p>
+            </div>
+            <div class="stat-card-icon-box stat-icon-teal">🎁</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-info">
+              <h3 id="admin-stat-matches">4</h3>
+              <p>AI Matches Generated</p>
+            </div>
+            <div class="stat-card-icon-box stat-icon-emerald">🤖</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-info">
+              <h3 id="admin-stat-pending-claims">1</h3>
+              <p>Pending Claims</p>
+            </div>
+            <div class="stat-card-icon-box stat-icon-purple">📋</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-info">
+              <h3 id="admin-stat-reunited">1</h3>
+              <p>Completed Returns</p>
+            </div>
+            <div class="stat-card-icon-box stat-icon-emerald">🤝</div>
+          </div>
+        </div>
+
+        <!-- AI Engine Health & Quick Actions Row -->
+        <div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:1.5rem; margin-bottom: 2rem;">
+          
+          <!-- AI System Health -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><span>🤖</span> AI Inference Engine Diagnostics</div>
+              <span class="badge badge-match-high">Cosine Sim: Active</span>
+            </div>
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; text-align:center;">
+              <div style="background:var(--bg-subtle); padding:1rem; border-radius:var(--radius-md);">
+                <div style="font-size:1.5rem;">👁️</div>
+                <strong style="display:block; margin:0.25rem 0; font-size:0.9rem;">CLIP ViT-B/32</strong>
+                <small style="color:var(--success); font-weight:700;">Online (82ms latency)</small>
+              </div>
+              <div style="background:var(--bg-subtle); padding:1rem; border-radius:var(--radius-md);">
+                <div style="font-size:1.5rem;">🧠</div>
+                <strong style="display:block; margin:0.25rem 0; font-size:0.9rem;">MiniLM-L6-v2</strong>
+                <small style="color:var(--success); font-weight:700;">Online (38ms latency)</small>
+              </div>
+              <div style="background:var(--bg-subtle); padding:1rem; border-radius:var(--radius-md);">
+                <div style="font-size:1.5rem;">🖼️</div>
+                <strong style="display:block; margin:0.25rem 0; font-size:0.9rem;">OpenCV 4.8</strong>
+                <small style="color:var(--success); font-weight:700;">Filter Pipeline Ready</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Moderation Card -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><span>⚡</span> Rapid Actions</div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:0.6rem;">
+              <a href="claims.html" class="btn btn-primary" style="justify-content:space-between;">
+                <span>Review Pending Claim (CLM-501)</span>
+                <span>→</span>
+              </a>
+              <a href="matches.html" class="btn btn-secondary" style="justify-content:space-between;">
+                <span>Monitor AI Match Confidence Distribution</span>
+                <span>→</span>
+              </a>
+              <a href="users.html" class="btn btn-secondary" style="justify-content:space-between;">
+                <span>Inspect Suspicious Accounts</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Lost & Found Reports Table -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span>📋</span> Platform Live Reports Stream</div>
+            <a href="lost-items.html" class="btn btn-sm btn-outline">Manage All Reports</a>
+          </div>
+
+          <div class="table-container" style="border:none; box-shadow:none;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Item Name</th>
+                  <th>Reporter</th>
+                  <th>Location</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th style="text-align:right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-live-stream-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const state = getState();
+      const tbody = document.getElementById('admin-live-stream-tbody');
+
+      if (tbody) {
+        let stream = [
+          ...(state.lostItems || []).slice(0, 3).map(i => ({ ...i, type: 'Lost' })),
+          ...(state.foundItems || []).slice(0, 3).map(i => ({ ...i, type: 'Found' }))
+        ];
+
+        tbody.innerHTML = stream.map(item => `
+          <tr>
+            <td>
+              <span class="badge ${item.type === 'Lost' ? 'badge-lost' : 'badge-found'}">
+                ● ${item.type.toUpperCase()}
+              </span>
+            </td>
+            <td><strong>${item.name}</strong></td>
+            <td>${item.userName || 'User'}</td>
+            <td>📍 ${item.location}</td>
+            <td>${formatDate(item.date)}</td>
+            <td><span class="badge badge-status">${item.status || 'Active'}</span></td>
+            <td style="text-align:right;">
+              <a href="../user/item-details.html?id=${item.id}&type=${item.type.toLowerCase()}" class="btn btn-sm btn-secondary">
+                Inspect
+              </a>
+            </td>
+          </tr>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Details - FindIt AI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-brand">
+          <img src="../assets/logo/logo.png" alt="FindIt AI Logo" class="sidebar-brand-img">
+        </a>
+      </div>
+
+      <div class="sidebar-nav-container">
+        <div>
+          <div class="sidebar-section-title">Main Menu</div>
+          <div class="sidebar-menu">
+            <a href="dashboard.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </span>
+              <span>Dashboard</span>
+            </a>
+            <a href="search-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </span>
+              <span>Search Database</span>
+            </a>
+            <a href="matches.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+              </span>
+              <span>AI Matches</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="sidebar-section-title">Report Items</div>
+          <div class="sidebar-menu">
+            <a href="report-lost.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              </span>
+              <span>Report Lost Item</span>
+            </a>
+            <a href="report-found.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line></svg>
+              </span>
+              <span>Report Found Item</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="sidebar-section-title">My Activity</div>
+          <div class="sidebar-menu">
+            <a href="my-lost-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              </span>
+              <span>My Lost Reports</span>
+            </a>
+            <a href="my-found-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline></svg>
+              </span>
+              <span>My Found Reports</span>
+            </a>
+            <a href="my-claims.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              </span>
+              <span>My Claims</span>
+            </a>
+            <a href="notifications.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              </span>
+              <span>Notifications</span>
+            </a>
+            <a href="rewards.html" class="sidebar-link">
+              <span class="sidebar-link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              </span>
+              <span>Rewards & Badges</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="user-snippet">
+          <div class="user-avatar">AM</div>
+          <div class="user-info-text">
+            <div class="user-info-name">Alex Morgan</div>
+            <div class="user-info-role">Community Member</div>
+          </div>
+        </div>
+        <button onclick="logout()" class="logout-icon-btn" title="Logout">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        </button>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="sidebar-toggle-btn" class="sidebar-toggle-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <button onclick="if(window.history.length > 1){window.history.back();}else{window.location.href='dashboard.html';}" class="topbar-back-btn" title="Go back to previous page" aria-label="Go Back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Back</span>
+          </button>
+          <div class="page-breadcrumb">
+            <a href="dashboard.html">Dashboard</a>
+            <span>/</span>
+            <a href="search-items.html">Search</a>
+            <span>/</span>
+            <span class="current">Item Details</span>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <button onclick="history.back()" class="btn btn-secondary btn-sm">← Back</button>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div id="item-details-view" class="card" style="max-width: 980px; margin: 0 auto; padding: 2.25rem; border-radius:24px;">
+          <!-- Rendered dynamically -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('item-details-view');
+      const params = new URLSearchParams(window.location.search);
+      const itemId = params.get('id');
+      const itemType = params.get('type') || 'lost';
+
+      const state = getState();
+      let item = null;
+
+      if (itemType === 'found') {
+        item = (state.foundItems || []).find(i => i.id === itemId);
+      } else {
+        item = (state.lostItems || []).find(i => i.id === itemId);
+      }
+
+      if (!item) {
+        item = (state.lostItems || []).find(i => i.id === itemId) || (state.foundItems || []).find(i => i.id === itemId);
+      }
+
+      if (!item) {
+        item = state.lostItems[0] || {};
+      }
+
+      const isLost = itemType === 'lost' || !item.custody;
+
+      container.innerHTML = `
+        <div style="display:grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: start;">
+          <div>
+            <div style="width:100%; height:340px; border-radius:20px; overflow:hidden; border:1px solid #e2e8f0; background:#f1f5f9; margin-bottom:1rem; box-shadow:0 4px 20px rgba(15,23,42,0.06);">
+              <img src="${item.image || 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600'}" alt="${item.name}" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="badge ${isLost ? 'badge-lost' : 'badge-found'}" style="width:100%; justify-content:center; padding:0.6rem; font-size:0.85rem; font-weight:700;">
+              ● ${isLost ? 'REPORTED LOST ITEM' : 'REPORTED FOUND ITEM'}
+            </div>
+          </div>
+
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+              <span class="badge badge-primary">${item.category || 'General'}</span>
+              <span style="font-size:0.85rem; color:var(--text-subtle); font-family:var(--font-mono);">ID: ${item.id}</span>
+            </div>
+
+            <h1 style="font-size: 2rem; font-weight:800; margin-bottom: 1rem;">${item.name}</h1>
+
+            <div style="background:#f8fafc; border-radius:14px; border:1px solid #eef2f6; padding:1.25rem 1.4rem; margin-bottom:1.5rem; display:flex; flex-direction:column; gap:0.65rem; font-size:0.925rem;">
+              <div>📍 <strong>${isLost ? 'Lost Location' : 'Found Location'}:</strong> ${item.location}</div>
+              <div>📅 <strong>Date Reported:</strong> ${formatDate(item.date)}</div>
+              <div>🎨 <strong>Dominant Colour:</strong> ${item.color || 'Unspecified'}</div>
+              ${!isLost && item.custody ? `<div>🏢 <strong>Current Physical Custody:</strong> <span style="color:var(--primary); font-weight:700;">${item.custody}</span></div>` : ''}
+              <div>👤 <strong>Reported By:</strong> ${item.userName || 'Community User'}</div>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Description & Distinctive Features</h3>
+              <p style="color:var(--text-muted); line-height:1.6;">${item.description || 'No detailed description provided.'}</p>
+            </div>
+
+            <div style="display:flex; gap:1rem; flex-wrap:wrap; padding-top:1.5rem; border-top:1px solid #f1f5f9;">
+              ${!isLost ? `
+                <a href="claim-item.html?id=${item.id}" class="btn btn-primary btn-lg" style="flex:1;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>Submit Ownership Claim</span>
+                </a>
+              ` : `
+                <a href="matches.html" class="btn btn-primary btn-lg" style="flex:1;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"></path></svg>
+                  <span>View AI Matches</span>
+                </a>
+              `}
+              <a href="search-items.html" class="btn btn-secondary btn-lg">Back to Search</a>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

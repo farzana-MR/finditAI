@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Users - Admin FindIt AI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <aside class="sidebar" style="background:#070d18; border-right-color:#142238;">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-brand">
+          <img src="../assets/logo/logo.png" alt="FindIt AI Logo" class="sidebar-brand-img">
+          <span class="sidebar-brand-text">FindIt <span>ADMIN</span></span>
+        </a>
+      </div>
+
+      <div class="sidebar-nav-container">
+        <div>
+          <div class="sidebar-section-title">Operations</div>
+          <div class="sidebar-menu">
+            <a href="dashboard.html" class="sidebar-link">
+              <span class="sidebar-link-icon">📊</span>
+              <span>Overview</span>
+            </a>
+            <a href="users.html" class="sidebar-link active">
+              <span class="sidebar-link-icon">👥</span>
+              <span>Manage Users</span>
+            </a>
+            <a href="lost-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">❓</span>
+              <span>Lost Item Reports</span>
+            </a>
+            <a href="found-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">🎁</span>
+              <span>Found Items & Custody</span>
+            </a>
+            <a href="claims.html" class="sidebar-link">
+              <span class="sidebar-link-icon">📋</span>
+              <span>Manage Claims</span>
+            </a>
+            <a href="matches.html" class="sidebar-link">
+              <span class="sidebar-link-icon">🤖</span>
+              <span>AI Match Monitoring</span>
+            </a>
+            <a href="reports.html" class="sidebar-link">
+              <span class="sidebar-link-icon">📈</span>
+              <span>Reports & Analytics</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="sidebar-section-title">Navigation</div>
+          <div class="sidebar-menu">
+            <a href="../user/dashboard.html" class="sidebar-link">
+              <span class="sidebar-link-icon">👤</span>
+              <span>Switch to User View</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-footer" style="background:#050912;">
+        <div class="user-snippet">
+          <div class="user-avatar" style="background:linear-gradient(135deg, #0f766e, #059669);">SJ</div>
+          <div class="user-info-text">
+            <div class="user-info-name">Sarah Jenkins</div>
+            <div class="user-info-role">Super Administrator</div>
+          </div>
+        </div>
+        <button onclick="logout()" class="logout-icon-btn" title="Logout">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        </button>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="sidebar-toggle-btn" class="sidebar-toggle-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <button onclick="if(window.history.length > 1){window.history.back();}else{window.location.href='dashboard.html';}" class="topbar-back-btn" title="Go back to previous page" aria-label="Go Back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Back</span>
+          </button>
+          <div class="page-breadcrumb">
+            <a href="dashboard.html">Admin</a>
+            <span>/</span>
+            <span class="current">Manage Users</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div class="page-title-bar">
+          <div>
+            <h1>Registered Platform Users</h1>
+            <p>Module 12: Monitor registered accounts, manage suspensions, and verify activity integrity.</p>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <div class="table-toolbar">
+            <input type="text" id="user-search-input" placeholder="Search user by name or email..." class="form-input" style="max-width:320px;">
+            <div style="font-size:0.85rem; color:var(--text-muted);" id="user-count-badge">Loading users...</div>
+          </div>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Contact</th>
+                <th>Role</th>
+                <th>Reports Filed</th>
+                <th>Reward Points</th>
+                <th>Account Status</th>
+                <th style="text-align:right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="users-table-tbody">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderAdminUsers();
+    });
+
+    function renderAdminUsers() {
+      const tbody = document.getElementById('users-table-tbody');
+      const searchInput = document.getElementById('user-search-input');
+      const countBadge = document.getElementById('user-count-badge');
+      const state = getState();
+
+      function draw(users) {
+        if (countBadge) countBadge.textContent = `${users.length} registered user${users.length === 1 ? '' : 's'}`;
+
+        tbody.innerHTML = users.map(u => `
+          <tr>
+            <td>
+              <div style="display:flex; align-items:center; gap:0.75rem;">
+                <div class="user-avatar" style="width:34px; height:34px; font-size:0.8rem;">
+                  ${u.name.substring(0, 2).toUpperCase()}
+                </div>
+                <div>
+                  <div style="font-weight:700;">${u.name}</div>
+                  <small style="color:var(--text-subtle);">ID: ${u.id}</small>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div>${u.email}</div>
+              <small style="color:var(--text-subtle);">${u.phone}</small>
+            </td>
+            <td><span class="badge badge-primary">${u.role.toUpperCase()}</span></td>
+            <td>${u.reportsCount || 0}</td>
+            <td style="color:var(--primary); font-weight:700;">${u.points || 0} pts</td>
+            <td>
+              <span class="badge ${u.status === 'Active' ? 'badge-found' : 'badge-lost'}">
+                ● ${u.status}
+              </span>
+            </td>
+            <td style="text-align:right;">
+              <button onclick="toggleUserStatus('${u.id}')" class="btn btn-sm ${u.status === 'Active' ? 'btn-danger' : 'btn-primary'}">
+                ${u.status === 'Active' ? 'Suspend' : 'Activate'}
+              </button>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      window.toggleUserStatus = function(id) {
+        const u = state.registeredUsers.find(x => x.id === id);
+        if (u) {
+          u.status = u.status === 'Active' ? 'Suspended' : 'Active';
+          saveState(state);
+          draw(state.registeredUsers);
+          showToast(`User ${u.name} status updated to ${u.status}`, 'info');
+        }
+      };
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const q = e.target.value.toLowerCase().trim();
+          const filtered = state.registeredUsers.filter(u => u.name.toLowerCase().includes(q) || u.email.toLowerCase().includes(q));
+          draw(filtered);
+        });
+      }
+
+      draw(state.registeredUsers || []);
+    }
+  </script>
+</body>
+</html>

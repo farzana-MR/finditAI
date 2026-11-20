@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports & Analytics - Admin FindIt AI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <aside class="sidebar" style="background:#070d18; border-right-color:#142238;">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-brand">
+          <img src="../assets/logo/logo.png" alt="FindIt AI Logo" class="sidebar-brand-img">
+          <span class="sidebar-brand-text">FindIt <span>ADMIN</span></span>
+        </a>
+      </div>
+
+      <div class="sidebar-nav-container">
+        <div>
+          <div class="sidebar-section-title">Operations</div>
+          <div class="sidebar-menu">
+            <a href="dashboard.html" class="sidebar-link">
+              <span class="sidebar-link-icon">📊</span>
+              <span>Overview</span>
+            </a>
+            <a href="users.html" class="sidebar-link">
+              <span class="sidebar-link-icon">👥</span>
+              <span>Manage Users</span>
+            </a>
+            <a href="lost-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">❓</span>
+              <span>Lost Item Reports</span>
+            </a>
+            <a href="found-items.html" class="sidebar-link">
+              <span class="sidebar-link-icon">🎁</span>
+              <span>Found Items & Custody</span>
+            </a>
+            <a href="claims.html" class="sidebar-link">
+              <span class="sidebar-link-icon">📋</span>
+              <span>Manage Claims</span>
+            </a>
+            <a href="matches.html" class="sidebar-link">
+              <span class="sidebar-link-icon">🤖</span>
+              <span>AI Match Monitoring</span>
+            </a>
+            <a href="reports.html" class="sidebar-link active">
+              <span class="sidebar-link-icon">📈</span>
+              <span>Reports & Analytics</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="sidebar-section-title">Navigation</div>
+          <div class="sidebar-menu">
+            <a href="../user/dashboard.html" class="sidebar-link">
+              <span class="sidebar-link-icon">👤</span>
+              <span>Switch to User View</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-footer" style="background:#050912;">
+        <div class="user-snippet">
+          <div class="user-avatar" style="background:linear-gradient(135deg, #0f766e, #059669);">SJ</div>
+          <div class="user-info-text">
+            <div class="user-info-name">Sarah Jenkins</div>
+            <div class="user-info-role">Super Administrator</div>
+          </div>
+        </div>
+        <button onclick="logout()" class="logout-icon-btn" title="Logout">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        </button>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="sidebar-toggle-btn" class="sidebar-toggle-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <button onclick="if(window.history.length > 1){window.history.back();}else{window.location.href='dashboard.html';}" class="topbar-back-btn" title="Go back to previous page" aria-label="Go Back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Back</span>
+          </button>
+          <div class="page-breadcrumb">
+            <a href="dashboard.html">Admin</a>
+            <span>/</span>
+            <span class="current">Reports & Analytics</span>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <button onclick="exportCSVReport()" class="btn btn-primary btn-sm">
+            <span>📥</span> Export CSV Audit Log
+          </button>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div class="page-title-bar">
+          <div>
+            <h1>Platform Performance Analytics & Reports</h1>
+            <p>Module 12: Recovery rate metrics, category breakdowns, and platform audit records.</p>
+          </div>
+        </div>
+
+        <!-- Metric KPI Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-info">
+              <h3>94.2%</h3>
+              <p>Reuniting Resolution Rate</p>
+            </div>
+            <div class="stat-card-icon-box stat-icon-emerald">🎯</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-info">
+              <h3>1.8 Days</h3>
+              <p>Average Turnaround Time</p>
+            </div>
+            <div class="stat-card-icon-box stat-icon-teal">⏱️</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-info">
+              <h3>1,475 pts</h3>
+              <p>Community Rewards Issued</p>
+            </div>
+            <div class="stat-card-icon-box stat-icon-purple">🏆</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-info">
+              <h3>0%</h3>
+              <p>False Handover Rate</p>
+            </div>
+            <div class="stat-card-icon-box stat-icon-blue">🛡️</div>
+          </div>
+        </div>
+
+        <!-- 2 Column Breakdown: Category Distribution + Monthly Trends -->
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:2rem; margin-top:2rem;">
+          
+          <!-- Category Breakdown Card -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><span>📂</span> Reports by Item Category</div>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:1.25rem;">
+              <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.875rem; margin-bottom:0.35rem;">
+                  <strong>Electronics & Gadgets</strong>
+                  <span>42% (5 reports)</span>
+                </div>
+                <div class="metric-progress" style="background:#e2e8f0; height:8px;">
+                  <div class="metric-progress-fill" style="width:42%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.875rem; margin-bottom:0.35rem;">
+                  <strong>Wallets, Purses & Bags</strong>
+                  <span>25% (3 reports)</span>
+                </div>
+                <div class="metric-progress" style="background:#e2e8f0; height:8px;">
+                  <div class="metric-progress-fill" style="width:25%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.875rem; margin-bottom:0.35rem;">
+                  <strong>Keys & Remote Fobs</strong>
+                  <span>18% (2 reports)</span>
+                </div>
+                <div class="metric-progress" style="background:#e2e8f0; height:8px;">
+                  <div class="metric-progress-fill" style="width:18%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.875rem; margin-bottom:0.35rem;">
+                  <strong>Accessories & Water Bottles</strong>
+                  <span>15% (2 reports)</span>
+                </div>
+                <div class="metric-progress" style="background:#e2e8f0; height:8px;">
+                  <div class="metric-progress-fill" style="width:15%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Monthly Historical Trend -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><span>📅</span> Monthly Reuniting Performance</div>
+            </div>
+
+            <div class="table-container" style="border:none; box-shadow:none;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Month</th>
+                    <th>Reports Filed</th>
+                    <th>AI Matches</th>
+                    <th>Returned</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Nov 2026 (MTD)</strong></td>
+                    <td>9 items</td>
+                    <td>4 high matches</td>
+                    <td><span class="badge badge-found">1 returned</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Oct 2026</strong></td>
+                    <td>24 items</td>
+                    <td>19 matches</td>
+                    <td><span class="badge badge-found">18 returned</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sep 2026</strong></td>
+                    <td>31 items</td>
+                    <td>26 matches</td>
+                    <td><span class="badge badge-found">25 returned</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function exportCSVReport() {
+      const state = getState();
+      let csvContent = "data:text/csv;charset=utf-8,";
+      csvContent += "Type,Item ID,Item Name,Category,Location,Date,Status\n";
+
+      (state.lostItems || []).forEach(i => {
+        csvContent += `Lost,${i.id},"${i.name}",${i.category},"${i.location}",${i.date},${i.status}\n`;
+      });
+
+      (state.foundItems || []).forEach(i => {
+        csvContent += `Found,${i.id},"${i.name}",${i.category},"${i.location}",${i.date},${i.status}\n`;
+      });
+
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `FindIt_AI_Report_${new Date().toISOString().split('T')[0]}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      showToast("CSV Audit Log generated and downloaded!", "success");
+    }
+  </script>
+</body>
+</html>

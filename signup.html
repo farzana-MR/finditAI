@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account - FindIt AI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-split-layout">
+    <!-- Left Hero/Branding Side -->
+    <div class="auth-banner-side">
+      <div>
+        <div style="margin-bottom: 1.5rem;">
+          <a href="index.html" class="auth-back-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Back to Home</span>
+          </a>
+        </div>
+
+        <a href="index.html" style="display:inline-block;">
+          <img src="assets/logo/logo.png" alt="FindIt AI Logo" class="auth-banner-logo">
+        </a>
+        <div class="auth-banner-content">
+          <h2>One Account. Dual Power.</h2>
+          <p>
+            Users can act as both item owners and finders through the same account. Report what you lost, list what you found, and earn community recognition.
+          </p>
+        </div>
+      </div>
+
+      <div class="auth-features-list">
+        <div class="auth-feature-item">
+          <div class="auth-feature-icon">🎁</div>
+          <span>100 Welcome Finder Points on sign-up</span>
+        </div>
+        <div class="auth-feature-item">
+          <div class="auth-feature-icon">⚡</div>
+          <span>Real-time instant AI match notifications</span>
+        </div>
+        <div class="auth-feature-item">
+          <div class="auth-feature-icon">🔒</div>
+          <span>Strict privacy: personal info never exposed</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Form Side -->
+    <div class="auth-form-side">
+      <div class="auth-form-header">
+        <h1>Create Your Account</h1>
+        <p>Join FindIt AI to safeguard and recover your belongings.</p>
+      </div>
+
+      <div id="signup-error-msg" class="form-feedback" style="margin-bottom: 1rem; padding: 0.75rem; background: #fee2e2; border: 1px solid #fca5a5; border-radius: var(--radius-sm);"></div>
+
+      <form id="signup-form">
+        <div class="form-group">
+          <label class="form-label" for="signup-name">Full Name <span class="required">*</span></label>
+          <div class="input-container">
+            <input type="text" id="signup-name" class="form-input" placeholder="e.g. Alex Morgan" required autocomplete="name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="signup-email">Email Address <span class="required">*</span></label>
+          <div class="input-container">
+            <input type="email" id="signup-email" class="form-input" placeholder="name@example.com" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="signup-phone">Phone Number <span class="required">*</span></label>
+          <div class="input-container">
+            <input type="tel" id="signup-phone" class="form-input" placeholder="+91 98765 43210" required autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="signup-password">Password <span class="required">*</span></label>
+          <div class="input-container">
+            <input type="password" id="signup-password" class="form-input with-icon-right" placeholder="Min 8 characters" required autocomplete="new-password">
+            <button type="button" class="password-toggle-btn" data-target="signup-password" title="Toggle password visibility">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="signup-confirm-password">Confirm Password <span class="required">*</span></label>
+          <div class="input-container">
+            <input type="password" id="signup-confirm-password" class="form-input with-icon-right" placeholder="Re-enter password" required autocomplete="new-password">
+            <button type="button" class="password-toggle-btn" data-target="signup-confirm-password" title="Toggle password visibility">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="checkbox-label">
+            <input type="checkbox" id="signup-terms" required>
+            <span>I agree to the <a href="about.html" target="_blank">Terms & Conditions</a> and Privacy Policy</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem;">
+          Register Account
+        </button>
+      </form>
+
+      <div class="auth-footer-prompt">
+        Already have an account? <a href="login.html">Sign in here</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
