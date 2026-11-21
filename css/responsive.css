@@ -3,30 +3,30 @@
    Media queries for Mobile, Tablet, and Desktop layouts
    =================================================================== */
 
-/* Large Tablets & Small Desktops (max-width: 1024px) */
-@media (max-width: 1024px) {
+/* Large Tablets & Small Desktops (max-width: 1080px) */
+@media (max-width: 1080px) {
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 3.5rem;
   }
 
   .auth-split-layout {
     grid-template-columns: 1fr;
-    max-width: 540px;
+    max-width: 560px;
   }
 
   .auth-banner-side {
-    padding: 2.5rem 2rem;
+    padding: 3rem 2.25rem;
   }
 
   .footer-container {
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    gap: 2.75rem;
   }
 
   .match-comparison-grid {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 
   .match-divider-vs {
@@ -39,7 +39,7 @@
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
-    left: -280px;
+    left: -290px;
     top: 0;
     bottom: 0;
     height: 100vh;
@@ -56,7 +56,7 @@
   }
 
   .topbar {
-    padding: 0 1rem;
+    padding: 0 1.15rem;
   }
 
   .search-input-pill {
@@ -64,28 +64,37 @@
   }
 
   .content-body {
-    padding: 1.25rem 1rem;
+    padding: 1.5rem 1.15rem;
   }
 
   .form-grid-2, .form-grid-3 {
     grid-template-columns: 1fr;
   }
 
-  .nav-links, .nav-actions .btn-outline {
+  .nav-links, .nav-actions .btn-secondary, .nav-actions .btn-outline {
     display: none;
   }
 
+  .brand-logo-img {
+    height: 44px;
+    width: 44px;
+  }
+
+  .brand-name {
+    font-size: 1.4rem;
+  }
+
   .mobile-nav-toggle {
-    display: block;
+    display: inline-flex;
   }
 
   .hero-title {
-    font-size: 2.35rem;
+    font-size: 2.65rem;
   }
 
   .hero-stats-row {
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.75rem;
   }
 
   .items-grid {
@@ -101,25 +110,52 @@
   }
 
   .site-footer {
-    padding: 3rem 1.25rem 1.5rem;
+    padding: 3.5rem 1.5rem 1.75rem;
   }
 
   .footer-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.25rem;
   }
 
   .footer-bottom {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.15rem;
     text-align: center;
+  }
+
+  .form-actions-studio {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions-right {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-actions-right .btn {
+    width: 100%;
   }
 }
 
 /* Mobile Phones (max-width: 480px) */
 @media (max-width: 480px) {
+  .brand-logo-img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .brand-name {
+    font-size: 1.3rem;
+  }
+
+  .brand-badge {
+    display: none;
+  }
+
   .hero-title {
-    font-size: 1.95rem;
+    font-size: 2.15rem;
   }
 
   .hero-cta-group {
@@ -132,14 +168,45 @@
   }
 
   .auth-form-side {
-    padding: 2rem 1.25rem;
+    padding: 2.25rem 1.5rem;
+  }
+
+  .auth-centered-layout {
+    padding: 2.25rem 1.5rem;
   }
 
   .stat-card {
-    padding: 1.1rem;
+    padding: 1.25rem;
   }
 
   .stat-card-info h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .studio-card {
+    padding: 1.35rem;
+  }
+
+  .filter-controls-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .segmented-status-control {
+    width: 100%;
+    display: flex;
+  }
+
+  .status-segment-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .filter-location-pill input {
+    width: 100%;
   }
 }

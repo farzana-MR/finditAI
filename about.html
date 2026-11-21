@@ -14,7 +14,10 @@
     <div class="nav-container">
       <a href="index.html" class="brand-link">
         <img src="assets/logo/logo.png" alt="FindIt AI Logo" class="brand-logo-img">
-        <div class="brand-name">FindIt <span>AI</span></div>
+        <div class="brand-name">
+          FindIt <span>AI</span>
+          <span class="brand-badge">Tech Spec</span>
+        </div>
       </a>
 
       <nav class="nav-links">
@@ -24,78 +27,104 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="index.html" class="topbar-back-btn" style="margin-right:0.75rem;">
+        <a href="index.html" class="topbar-back-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
           <span>Back to Home</span>
         </a>
 
         <a href="login.html" class="btn btn-secondary btn-sm">Sign In</a>
         <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">
+          <span>Home</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="user/search-items.html" class="mobile-nav-link">
+          <span>Search Database</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="about.html" class="mobile-nav-link active">
+          <span>About & Technology</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </div>
+      <div style="display:flex; gap:0.75rem; margin-top:0.5rem;">
+        <a href="login.html" class="btn btn-secondary" style="flex:1;">Sign In</a>
+        <a href="signup.html" class="btn btn-primary" style="flex:1;">Get Started</a>
       </div>
     </div>
   </header>
 
   <!-- Page Header -->
-  <section class="section section-bg-subtle" style="padding: 4rem 1.5rem 3rem;">
-    <div style="max-width: 860px; margin: 0 auto; text-align: center;">
-      <div class="badge badge-primary" style="margin-bottom: 1rem;">PROJECT OVERVIEW & SPECIFICATIONS</div>
-      <h1 style="font-size: 2.75rem; margin-bottom: 1rem;">
-        Intelligent Lost & Found Management System
+  <section class="section section-bg-subtle" style="padding: 4.5rem 1.75rem 3.5rem;">
+    <div style="max-width: 880px; margin: 0 auto; text-align: center;">
+      <div class="badge badge-primary" style="margin-bottom: 1.25rem;">PROJECT OVERVIEW & ARCHITECTURE</div>
+      <h1 style="font-size: 3rem; margin-bottom: 1.15rem; letter-spacing: -0.03em;">
+        Intelligent Lost & Found Platform
       </h1>
-      <p style="font-size: 1.15rem; color: var(--text-muted);">
-        Combining Computer Vision and Natural Language Processing to automate belonging recovery with transparency, mathematical precision, and anti-fraud verification.
+      <p style="font-size: 1.2rem; color: var(--text-muted); line-height: 1.65;">
+        Combining OpenAI CLIP Computer Vision and Sentence Transformers NLP to automate belonging recovery with transparency, mathematical precision, and zero-knowledge privacy.
       </p>
     </div>
   </section>
 
   <!-- Content Sections -->
   <main class="section">
-    <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 3.5rem;">
+    <div style="max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: 4rem;">
 
       <!-- Section 1: The Problem & Vision -->
       <section>
-        <h2 style="margin-bottom: 1rem;">1. Project Overview & Mission</h2>
-        <p style="font-size: 1.05rem; margin-bottom: 1.25rem;">
+        <h2 style="margin-bottom: 1.15rem; font-size: 1.85rem;">1. Problem Definition & Mission</h2>
+        <p style="font-size: 1.05rem; margin-bottom: 1.35rem; line-height: 1.7;">
           In high-traffic environments such as universities, corporate campuses, shopping malls, and public transit terminals, thousands of personal possessions are lost daily. Traditional recovery relies on physical notice boards, manual ledgers, or disjointed social media posts that rarely correlate with found item logs.
         </p>
-        <p style="font-size: 1.05rem;">
+        <p style="font-size: 1.05rem; line-height: 1.7;">
           <strong>FindIt AI</strong> solves this with an intelligent multi-modal platform. By transforming photographs into visual embeddings and text descriptions into semantic vectors, our AI matching engine pairs lost reports with found reports in real-time, drastically reducing recovery latency from weeks to minutes.
         </p>
       </section>
 
       <!-- Section 2: Technology Stack -->
       <section id="tech">
-        <h2 style="margin-bottom: 1.5rem;">2. Core AI & Technical Architecture</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <h2 style="margin-bottom: 1.5rem; font-size: 1.85rem;">2. Core AI & Technical Architecture</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem;">
           
           <div class="card card-hoverable">
-            <div style="font-size: 2rem; margin-bottom: 0.75rem;">👁️</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Computer Vision (CLIP)</h3>
-            <p style="font-size: 0.9rem;">
-              Utilizes OpenAI's Contrastive Language-Image Pre-Training (CLIP) model to project image features into high-dimensional embedding spaces, capturing geometry, brand styling, color nuances, and form factor.
+            <div style="font-size: 2.25rem; margin-bottom: 0.85rem;">👁️</div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.65rem;">Computer Vision (CLIP)</h3>
+            <p style="font-size: 0.925rem; line-height: 1.6;">
+              Utilizes OpenAI's Contrastive Language-Image Pre-Training (CLIP ViT-B/32) to project visual features into high-dimensional embedding spaces, capturing geometry, brand styling, color nuances, and form factor.
             </p>
           </div>
 
           <div class="card card-hoverable">
-            <div style="font-size: 2rem; margin-bottom: 0.75rem;">🧠</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">NLP (Sentence Transformers)</h3>
-            <p style="font-size: 0.9rem;">
-              Encodes detailed text descriptions using all-MiniLM-L6-v2. Synonyms and descriptive variations (e.g., "leather purse" vs "bifold wallet") map to adjacent coordinates in vector space.
+            <div style="font-size: 2.25rem; margin-bottom: 0.85rem;">🧠</div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.65rem;">NLP (Sentence Transformers)</h3>
+            <p style="font-size: 0.925rem; line-height: 1.6;">
+              Encodes detailed text descriptions using all-MiniLM-L6-v2. Synonyms and descriptive variations (e.g., "leather purse" vs "bifold wallet") map to adjacent coordinates in semantic vector space.
             </p>
           </div>
 
           <div class="card card-hoverable">
-            <div style="font-size: 2rem; margin-bottom: 0.75rem;">📐</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Cosine Similarity Metric</h3>
-            <p style="font-size: 0.9rem;">
+            <div style="font-size: 2.25rem; margin-bottom: 0.85rem;">📐</div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.65rem;">Cosine Similarity Metric</h3>
+            <p style="font-size: 0.925rem; line-height: 1.6;">
               Measures the cosine of the angle between normalized vector projections. A score above 0.80 indicates a High Match, while 0.65 to 0.79 triggers a Possible Match review.
             </p>
           </div>
 
           <div class="card card-hoverable">
-            <div style="font-size: 2rem; margin-bottom: 0.75rem;">🖼️</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">OpenCV Image Processing</h3>
-            <p style="font-size: 0.9rem;">
+            <div style="font-size: 2.25rem; margin-bottom: 0.85rem;">🖼️</div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.65rem;">OpenCV Image Processing</h3>
+            <p style="font-size: 0.925rem; line-height: 1.6;">
               Pre-processes user uploads via OpenCV: background segmentation, color histogram normalization, contour detection, and noise suppression before neural inference.
             </p>
           </div>
@@ -103,30 +132,30 @@
       </section>
 
       <!-- Section 3: Matching Formula -->
-      <section class="card" style="background: linear-gradient(135deg, #091c18 0%, #062e24 100%); color: #ffffff; border: 1px solid rgba(16, 185, 129, 0.3);">
-        <h3 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 1rem;">Multi-Factor Match Formula</h3>
-        <p style="color: #cbd5e1; margin-bottom: 1.5rem;">
-          To ensure reliable suggestions without false positives, the system calculates an aggregate score:
+      <section class="card" style="background: linear-gradient(145deg, #071524 0%, #05261e 100%); color: #ffffff; border: 1px solid rgba(16, 185, 129, 0.35); box-shadow: var(--shadow-xl); padding: 2.5rem;">
+        <h3 style="color: #ffffff; font-size: 1.65rem; margin-bottom: 1rem;">Multi-Factor Match Formula</h3>
+        <p style="color: #cbd5e1; margin-bottom: 1.5rem; line-height: 1.65;">
+          To ensure reliable suggestions without false positives, the system calculates an aggregate weighted similarity score across multi-modal dimensions:
         </p>
 
-        <div style="background: rgba(0,0,0,0.3); padding: 1.25rem; border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.95rem; color: var(--accent-neon); margin-bottom: 1.5rem; border: 1px solid rgba(0,230,118,0.2);">
+        <div style="background: rgba(0,0,0,0.4); padding: 1.35rem 1.65rem; border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 1rem; color: var(--accent-neon); margin-bottom: 1.65rem; border: 1px solid rgba(0,230,118,0.25); box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);">
           Score = (0.40 × CLIP_Visual) + (0.30 × NLP_Semantic) + (0.20 × Location_Score) + (0.10 × Date_Proximity)
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.85rem; color: #94a3b8;">
-          <div><strong>≥ 80% Similarity:</strong> High Match (Immediate Push Notification)</div>
-          <div><strong>65% - 79%:</strong> Possible Match (Highlighted on Dashboard)</div>
-          <div><strong>&lt; 65%:</strong> Filtered below notification threshold</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.25rem; font-size: 0.885rem; color: #a7b7cc;">
+          <div><strong style="color:#00e676;">≥ 80% Similarity:</strong> High Match (Immediate Push Notification)</div>
+          <div><strong style="color:#fcd34d;">65% - 79%:</strong> Possible Match (Highlighted on Dashboard)</div>
+          <div><strong style="color:#94a3b8;">&lt; 65%:</strong> Filtered below notification threshold</div>
         </div>
       </section>
 
       <!-- Section 4: Secure Claim & Privacy -->
       <section>
-        <h2 style="margin-bottom: 1rem;">3. Privacy & Anti-Fraud Verification</h2>
-        <p style="font-size: 1.05rem; margin-bottom: 1.25rem;">
+        <h2 style="margin-bottom: 1.15rem; font-size: 1.85rem;">3. Privacy & Zero-Knowledge Anti-Fraud Verification</h2>
+        <p style="font-size: 1.05rem; margin-bottom: 1.35rem; line-height: 1.7;">
           To prevent fraudulent claims, FindIt AI strictly adheres to zero-knowledge public displays:
         </p>
-        <ul style="display:flex; flex-direction:column; gap:0.75rem; padding-left:1.5rem; list-style:disc; color:var(--text-muted); font-size:1rem;">
+        <ul style="display:flex; flex-direction:column; gap:0.95rem; padding-left:1.5rem; list-style:disc; color:var(--text-muted); font-size:1.02rem; line-height: 1.65;">
           <li>Identifying serial numbers, passwords, lock screen wallpapers, and internal wallet contents are concealed from public browsing.</li>
           <li>A claimant must provide granular, unprompted answers to finder security questions.</li>
           <li>Authorized administrators or custodial officers verify matching documents before approving in-person handover.</li>
@@ -134,31 +163,31 @@
       </section>
 
       <!-- Section 5: Rewards -->
-      <section class="card">
-        <h2 style="margin-bottom: 1rem;">4. Gamification & Community Incentives</h2>
-        <p style="font-size: 1rem; color:var(--text-muted); margin-bottom: 1.5rem;">
+      <section class="card" style="padding: 2.5rem;">
+        <h2 style="margin-bottom: 1.15rem; font-size: 1.85rem;">4. Gamification & Community Incentives</h2>
+        <p style="font-size: 1.05rem; color:var(--text-muted); margin-bottom: 1.75rem; line-height: 1.65;">
           Finders are the true heroes of any recovery network. FindIt AI celebrates honesty through our Finder Points & Achievement System:
         </p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-          <div style="background:var(--bg-subtle); padding:1rem; border-radius:var(--radius-md); text-align:center;">
-            <div style="font-size:1.75rem;">🥇</div>
-            <strong>First Finder</strong>
-            <p style="font-size:0.8rem; margin-top:0.25rem;">Awarded on first reported found item</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.25rem;">
+          <div style="background:var(--bg-subtle); padding:1.35rem 1.15rem; border-radius:var(--radius-md); text-align:center; border: 1px solid var(--border-color);">
+            <div style="font-size:2rem; margin-bottom: 0.35rem;">🥇</div>
+            <strong style="font-size:1rem; display:block;">First Finder</strong>
+            <p style="font-size:0.825rem; margin-top:0.35rem;">Awarded on first reported found item</p>
           </div>
-          <div style="background:var(--bg-subtle); padding:1rem; border-radius:var(--radius-md); text-align:center;">
-            <div style="font-size:1.75rem;">🤝</div>
-            <strong>Helping Hand</strong>
-            <p style="font-size:0.8rem; margin-top:0.25rem;">Assisted in 3 verified successful returns</p>
+          <div style="background:var(--bg-subtle); padding:1.35rem 1.15rem; border-radius:var(--radius-md); text-align:center; border: 1px solid var(--border-color);">
+            <div style="font-size:2rem; margin-bottom: 0.35rem;">🤝</div>
+            <strong style="font-size:1rem; display:block;">Helping Hand</strong>
+            <p style="font-size:0.825rem; margin-top:0.35rem;">Assisted in 3 verified successful returns</p>
           </div>
-          <div style="background:var(--bg-subtle); padding:1rem; border-radius:var(--radius-md); text-align:center;">
-            <div style="font-size:1.75rem;">⭐</div>
-            <strong>Super Finder</strong>
-            <p style="font-size:0.8rem; margin-top:0.25rem;">Earned 300+ total reward points</p>
+          <div style="background:var(--bg-subtle); padding:1.35rem 1.15rem; border-radius:var(--radius-md); text-align:center; border: 1px solid var(--border-color);">
+            <div style="font-size:2rem; margin-bottom: 0.35rem;">⭐</div>
+            <strong style="font-size:1rem; display:block;">Super Finder</strong>
+            <p style="font-size:0.825rem; margin-top:0.35rem;">Earned 300+ total reward points</p>
           </div>
-          <div style="background:var(--bg-subtle); padding:1rem; border-radius:var(--radius-md); text-align:center;">
-            <div style="font-size:1.75rem;">👑</div>
-            <strong>Community Hero</strong>
-            <p style="font-size:0.8rem; margin-top:0.25rem;">Top 5 rank on platform leaderboard</p>
+          <div style="background:var(--bg-subtle); padding:1.35rem 1.15rem; border-radius:var(--radius-md); text-align:center; border: 1px solid var(--border-color);">
+            <div style="font-size:2rem; margin-bottom: 0.35rem;">👑</div>
+            <strong style="font-size:1rem; display:block;">Community Hero</strong>
+            <p style="font-size:0.825rem; margin-top:0.35rem;">Top 5 rank on platform leaderboard</p>
           </div>
         </div>
       </section>
@@ -169,18 +198,23 @@
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <div style="display:flex; align-items:center; gap:0.75rem;">
-          <img src="assets/logo/logo.png" alt="FindIt AI" style="height:38px;">
-          <h3 style="color:#ffffff; font-size:1.3rem;">FindIt <span style="color:var(--accent-neon);">AI</span></h3>
+        <div style="display:flex; align-items:center; gap:0.85rem;">
+          <img src="assets/logo/logo.png" alt="FindIt AI Logo" class="footer-logo-img">
+          <h3 style="color:#ffffff; font-size:1.4rem;">FindIt <span style="color:var(--accent-neon);">AI</span></h3>
         </div>
-        <p>Smart Matching. Faster Finding. Better Reuniting.</p>
+        <p>Smart Matching. Faster Finding. Better Reuniting. Transforming lost and found management through Computer Vision & NLP.</p>
+        <div style="margin-top:1.25rem;">
+          <span class="footer-status-pill">● Neural Inference Engine Online</span>
+        </div>
       </div>
 
       <div class="footer-col">
-        <h4>Explore</h4>
+        <h4>Navigation</h4>
         <div class="footer-links">
           <a href="index.html">Home</a>
           <a href="user/search-items.html">Search Items</a>
+          <a href="user/report-lost.html">Report Lost Item</a>
+          <a href="user/report-found.html">Report Found Item</a>
           <a href="about.html">About & Technology</a>
         </div>
       </div>
@@ -192,19 +226,21 @@
           <a href="user/report-lost.html">Report Lost</a>
           <a href="user/report-found.html">Report Found</a>
           <a href="user/rewards.html">Rewards</a>
+          <a href="login.html">Sign In</a>
         </div>
       </div>
 
       <div class="footer-col">
-        <h4>Admin</h4>
+        <h4>Administration</h4>
         <div class="footer-links">
-          <a href="admin/login.html">Admin Portal</a>
+          <a href="admin/login.html">Admin Portal Login</a>
           <a href="admin/dashboard.html">Admin Dashboard</a>
+          <a href="admin/claims.html">Manage Claims</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 FindIt AI. Pure HTML5, CSS3, Vanilla JavaScript.</div>
+      <div>© 2026 FindIt AI. Built according to PRD v1.0 specifications. Pure HTML5, CSS3, & Vanilla JavaScript.</div>
     </div>
   </footer>
 

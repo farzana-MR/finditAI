@@ -14,7 +14,10 @@
     <div class="nav-container">
       <a href="index.html" class="brand-link">
         <img src="assets/logo/logo.png" alt="FindIt AI Logo" class="brand-logo-img">
-        <div class="brand-name">FindIt <span>AI</span></div>
+        <div class="brand-name">
+          FindIt <span>AI</span>
+          <span class="brand-badge">v2.4</span>
+        </div>
       </a>
 
       <nav class="nav-links">
@@ -27,6 +30,35 @@
       <div class="nav-actions">
         <a href="login.html" class="btn btn-secondary btn-sm">Sign In</a>
         <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link active">
+          <span>Home</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="user/search-items.html" class="mobile-nav-link">
+          <span>Search Database</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="about.html" class="mobile-nav-link">
+          <span>How AI Matching Works</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="about.html#tech" class="mobile-nav-link">
+          <span>Technology & Architecture</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </div>
+      <div style="display:flex; gap:0.75rem; margin-top:0.5rem;">
+        <a href="login.html" class="btn btn-secondary" style="flex:1;">Sign In</a>
+        <a href="signup.html" class="btn btn-primary" style="flex:1;">Get Started</a>
       </div>
     </div>
   </header>
@@ -72,7 +104,7 @@
           </div>
           <div class="stat-item">
             <h3>100%</h3>
-            <p>Privacy Protected</p>
+            <p>Zero-Knowledge Privacy</p>
           </div>
         </div>
       </div>
@@ -83,7 +115,10 @@
           <div class="ai-engine-chip">
             <span class="radar-dot"></span> CLIP-ViT-B/32 NEURAL MATCH
           </div>
-          <span style="font-size: 0.8rem; color: #a7f3d0; font-family: var(--font-mono);">Confidence: 96.4%</span>
+          <div style="display:flex; align-items:center; gap:0.6rem;">
+            <span style="font-size: 0.75rem; color: #6ee7b7; font-family: var(--font-mono); background: rgba(16,185,129,0.15); padding: 2px 8px; border-radius: 999px;">Latency: 32ms</span>
+            <span style="font-size: 0.8rem; color: #a7f3d0; font-family: var(--font-mono); font-weight:700;">Confidence: 96.4%</span>
+          </div>
         </div>
 
         <div class="matching-demo-grid">
@@ -94,14 +129,14 @@
               <div class="scan-laser"></div>
             </div>
             <span class="badge badge-lost" style="font-size:0.7rem;">REPORTED LOST</span>
-            <div style="font-size:0.85rem; font-weight:700; margin-top:0.35rem; color:#ffffff;">AirPods Pro 2</div>
+            <div style="font-size:0.885rem; font-weight:700; margin-top:0.4rem; color:#ffffff;">AirPods Pro 2</div>
             <small style="color:#94a3b8; font-size:0.75rem;">Central Library, 2nd Fl</small>
           </div>
 
           <!-- Score Circle in center -->
           <div class="match-score-badge-center">
             <div class="score-circle">96%</div>
-            <span style="font-size:0.7rem; font-weight:700; color:var(--accent-neon); text-transform:uppercase;">
+            <span style="font-size:0.7rem; font-weight:800; color:var(--accent-neon); text-transform:uppercase; letter-spacing:0.06em; margin-top:0.25rem;">
               HIGH MATCH
             </span>
           </div>
@@ -113,7 +148,7 @@
               <div class="scan-laser" style="animation-delay: -1.2s;"></div>
             </div>
             <span class="badge badge-found" style="font-size:0.7rem;">REPORTED FOUND</span>
-            <div style="font-size:0.85rem; font-weight:700; margin-top:0.35rem; color:#ffffff;">White Earbuds Case</div>
+            <div style="font-size:0.885rem; font-weight:700; margin-top:0.4rem; color:#ffffff;">White Earbuds Case</div>
             <small style="color:#94a3b8; font-size:0.75rem;">Library Security Desk</small>
           </div>
         </div>
@@ -149,7 +184,7 @@
           </div>
         </div>
 
-        <div style="margin-top: 1.25rem; display: flex; justify-content: flex-end;">
+        <div style="margin-top: 1.35rem; display: flex; justify-content: flex-end;">
           <a href="login.html" class="btn btn-sm btn-primary" style="width: 100%;">
             Try Live System Demo →
           </a>
@@ -157,6 +192,28 @@
       </div>
     </div>
   </section>
+
+  <!-- Enterprise Tech Showcase Strip -->
+  <div class="tech-showcase-strip">
+    <div class="tech-strip-container">
+      <div class="tech-strip-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+        <span>OpenAI CLIP-ViT-B/32 Visual Embeddings</span>
+      </div>
+      <div class="tech-strip-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg>
+        <span>all-MiniLM-L6-v2 Sentence Transformers</span>
+      </div>
+      <div class="tech-strip-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+        <span>OpenCV Multi-Modal Pre-Processing</span>
+      </div>
+      <div class="tech-strip-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Zero-Knowledge Anti-Fraud Verification</span>
+      </div>
+    </div>
+  </div>
 
   <!-- Core Features Section -->
   <section class="section">
@@ -169,37 +226,37 @@
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon-box">👁️</div>
-        <h3 style="font-size:1.2rem;">Computer Vision (CLIP + OpenCV)</h3>
+        <h3 style="font-size:1.25rem;">Computer Vision (CLIP + OpenCV)</h3>
         <p>Extracts deep multi-modal feature vectors from item photographs. Matches items across varying angles, lighting conditions, and partial occlusions.</p>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon-box">🧠</div>
-        <h3 style="font-size:1.2rem;">Sentence Transformers NLP</h3>
+        <h3 style="font-size:1.25rem;">Sentence Transformers NLP</h3>
         <p>Understands context and semantic intent in item descriptions. If one user says "bifold brown purse" and another says "leather Fossil wallet", our NLP model connects them.</p>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon-box">🛡️</div>
-        <h3 style="font-size:1.2rem;">Anti-Fraud Verification</h3>
+        <h3 style="font-size:1.25rem;">Anti-Fraud Verification</h3>
         <p>Private item features and serial numbers are never exposed publicly. Claimants must answer proprietary verification questions before approval.</p>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon-box">🏆</div>
-        <h3 style="font-size:1.2rem;">Gamified Finder Rewards</h3>
+        <h3 style="font-size:1.25rem;">Gamified Finder Rewards</h3>
         <p>Incentivizes honesty and community cooperation. Genuine finders earn reward points, unlock achievement badges, and climb the platform leaderboard.</p>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon-box">⚡</div>
-        <h3 style="font-size:1.2rem;">Multi-Factor Match Score</h3>
+        <h3 style="font-size:1.25rem;">Multi-Factor Match Score</h3>
         <p>Considers 6 critical dimensions: Visual similarity, Text semantics, Item category, Dominant colour, Location coordinates, and Date elapsed.</p>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon-box">📱</div>
-        <h3 style="font-size:1.2rem;">Instant Multi-Channel Alerts</h3>
+        <h3 style="font-size:1.25rem;">Instant Multi-Channel Alerts</h3>
         <p>Receive immediate alerts via in-app notifications and email when our AI detects a high-probability match for your lost report.</p>
       </div>
     </div>
@@ -216,30 +273,30 @@
     <div class="workflow-steps-grid">
       <div class="step-card">
         <div class="step-number">01</div>
-        <div class="feature-icon-box" style="margin-bottom:1rem;">📸</div>
+        <div class="feature-icon-box" style="margin-bottom:1.25rem;">📸</div>
         <h4>1. Report Item</h4>
-        <p style="font-size:0.9rem; margin-top:0.5rem;">Upload a photograph and quick details of what you lost or found. Takes under 60 seconds.</p>
+        <p style="font-size:0.925rem; margin-top:0.5rem;">Upload a photograph and quick details of what you lost or found. Takes under 60 seconds.</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">02</div>
-        <div class="feature-icon-box" style="margin-bottom:1rem;">🤖</div>
+        <div class="feature-icon-box" style="margin-bottom:1.25rem;">🤖</div>
         <h4>2. AI Neural Scan</h4>
-        <p style="font-size:0.9rem; margin-top:0.5rem;">Our backend processes the photo and text using CLIP and Sentence Transformers to calculate similarity vectors.</p>
+        <p style="font-size:0.925rem; margin-top:0.5rem;">Our backend processes the photo and text using CLIP and Sentence Transformers to calculate similarity vectors.</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">03</div>
-        <div class="feature-icon-box" style="margin-bottom:1rem;">🔐</div>
+        <div class="feature-icon-box" style="margin-bottom:1.25rem;">🔐</div>
         <h4>3. Secure Claim</h4>
-        <p style="font-size:0.9rem; margin-top:0.5rem;">Review high-match suggestions side-by-side. The true owner answers security verification questions.</p>
+        <p style="font-size:0.925rem; margin-top:0.5rem;">Review high-match suggestions side-by-side. The true owner answers security verification questions.</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">04</div>
-        <div class="feature-icon-box" style="margin-bottom:1rem;">🤝</div>
+        <div class="feature-icon-box" style="margin-bottom:1.25rem;">🤝</div>
         <h4>4. Safe Reunite & Reward</h4>
-        <p style="font-size:0.9rem; margin-top:0.5rem;">Belonging is safely handed over at verified custody desks, and the honest finder earns points and badges!</p>
+        <p style="font-size:0.925rem; margin-top:0.5rem;">Belonging is safely handed over at verified custody desks, and the honest finder earns points and badges!</p>
       </div>
     </div>
 
@@ -256,7 +313,7 @@
       <p>Browse live listings currently tracked in the FindIt AI system.</p>
     </div>
 
-    <div style="max-width: 1280px; margin: 0 auto;">
+    <div style="max-width: 1320px; margin: 0 auto;">
       <div class="items-grid" id="homepage-preview-grid">
         <!-- Rendered statically for SEO & fallback, synced with seed state -->
         <div class="item-card card-hoverable">
@@ -266,9 +323,9 @@
             <div class="item-date-overlay">Nov 18, 2026</div>
           </div>
           <div class="item-card-body">
-            <span style="font-size:0.75rem; color:var(--primary); font-weight:700;">ELECTRONICS</span>
+            <span style="font-size:0.75rem; color:var(--primary); font-weight:800; letter-spacing:0.06em;">ELECTRONICS</span>
             <h3 class="item-card-title">Apple AirPods Pro 2</h3>
-            <p style="font-size:0.85rem; color:var(--text-muted);">White wireless earbuds in MagSafe case with green lanyard loop attached.</p>
+            <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.55;">White wireless earbuds in MagSafe case with green lanyard loop attached.</p>
             <div class="item-card-meta">
               <div class="item-meta-row"><span>📍</span><span>Central University Library</span></div>
             </div>
@@ -286,9 +343,9 @@
             <div class="item-date-overlay">Nov 17, 2026</div>
           </div>
           <div class="item-card-body">
-            <span style="font-size:0.75rem; color:var(--primary); font-weight:700;">WALLETS & BAGS</span>
+            <span style="font-size:0.75rem; color:var(--primary); font-weight:800; letter-spacing:0.06em;">WALLETS & BAGS</span>
             <h3 class="item-card-title">Fossil Brown Leather Wallet</h3>
-            <p style="font-size:0.85rem; color:var(--text-muted);">Bifold genuine leather with student ID and transit cards.</p>
+            <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.55;">Bifold genuine leather with student ID and transit cards.</p>
             <div class="item-card-meta">
               <div class="item-meta-row"><span>📍</span><span>Tech Hub Cafeteria</span></div>
             </div>
@@ -306,9 +363,9 @@
             <div class="item-date-overlay">Nov 19, 2026</div>
           </div>
           <div class="item-card-body">
-            <span style="font-size:0.75rem; color:var(--primary); font-weight:700;">ACCESSORIES</span>
+            <span style="font-size:0.75rem; color:var(--primary); font-weight:800; letter-spacing:0.06em;">ACCESSORIES</span>
             <h3 class="item-card-title">Stainless Blue Vacuum Flask</h3>
-            <p style="font-size:0.85rem; color:var(--text-muted);">Cobalt blue insulated flask covered with national park stickers.</p>
+            <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.55;">Cobalt blue insulated flask covered with national park stickers.</p>
             <div class="item-card-meta">
               <div class="item-meta-row"><span>📍</span><span>Sports Complex Gym</span></div>
             </div>
@@ -320,8 +377,8 @@
         </div>
       </div>
 
-      <div style="text-align: center; margin-top: 2.5rem;">
-        <a href="user/search-items.html" class="btn btn-secondary">
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="user/search-items.html" class="btn btn-secondary btn-lg">
           Explore All Lost & Found Reports →
         </a>
       </div>
@@ -332,11 +389,14 @@
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <div style="display:flex; align-items:center; gap:0.75rem;">
-          <img src="assets/logo/logo.png" alt="FindIt AI" style="height:38px;">
-          <h3 style="color:#ffffff; font-size:1.3rem;">FindIt <span style="color:var(--accent-neon);">AI</span></h3>
+        <div style="display:flex; align-items:center; gap:0.85rem;">
+          <img src="assets/logo/logo.png" alt="FindIt AI Logo" class="footer-logo-img">
+          <h3 style="color:#ffffff; font-size:1.4rem;">FindIt <span style="color:var(--accent-neon);">AI</span></h3>
         </div>
         <p>Smart Matching. Faster Finding. Better Reuniting. Transforming lost and found management through Computer Vision & NLP.</p>
+        <div style="margin-top:1.25rem;">
+          <span class="footer-status-pill">● Neural Inference Engine Online</span>
+        </div>
       </div>
 
       <div class="footer-col">

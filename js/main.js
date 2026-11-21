@@ -515,11 +515,43 @@ function calculateAIMatchScores(lostItem, foundItem) {
   };
 }
 
-// Global UI initializer (Notification Bell Dropdown & User Pill)
+// Global UI initializer (Notification Bell Dropdown, User Pill, Mobile Nav)
 document.addEventListener('DOMContentLoaded', () => {
   initGlobalHeaderWidgets();
   initMobileSidebarToggle();
+  initPublicMobileNavToggle();
+  initNavScrollDetection();
 });
+
+function initPublicMobileNavToggle() {
+  const toggleBtn = document.querySelector('.mobile-nav-toggle');
+  const drawer = document.querySelector('.mobile-nav-drawer');
+  if (toggleBtn && drawer) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      drawer.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!drawer.contains(e.target) && !toggleBtn.contains(e.target)) {
+        drawer.classList.remove('active');
+      }
+    });
+  }
+}
+
+function initNavScrollDetection() {
+  const siteNav = document.querySelector('.site-nav');
+  if (siteNav) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        siteNav.classList.add('scrolled');
+      } else {
+        siteNav.classList.remove('scrolled');
+      }
+    }, { passive: true });
+  }
+}
 
 function initGlobalHeaderWidgets() {
   const bellBtn = document.getElementById('notification-bell-btn');
